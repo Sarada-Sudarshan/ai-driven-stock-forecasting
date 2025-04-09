@@ -1,0 +1,19 @@
+# Ignore all except necessary files/folders
+*
+!.gitignore
+!requirements.txt
+!app/
+!utils/
+!models/
+!tests/
+
+# Specific ignores
+venv*/
+.env
+data/
+__pycache__/
+*.png
+*.ipynb_checkpoints
+*.pkl
+*.h5
+*.csv
