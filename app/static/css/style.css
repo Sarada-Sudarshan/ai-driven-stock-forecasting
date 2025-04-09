@@ -1,0 +1,142 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #2a2a2a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-select {
+    background-color: #343434;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-select:focus {
+    background-color: #343434;
+    color: white;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
+
+#stockChart {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+}
+
+.table {
+    color: white !important;
+}
+
+.table th, .table td {
+    border-color: #3a3a3a !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Metrics styling */
+.metrics {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.metrics p {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.metrics span {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.chart-container {
+    width: 100%;
+    min-height: 400px;
+    margin: 20px 0;
+}
+
+.chart-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Sentiment Table Styles */
+.table-dark {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.table-dark thead th {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-dark tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+#loadMoreNews {
+    transition: all 0.3s ease;
+}
+
+#loadMoreNews:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+} 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Stock Price Prediction</h1>
+        
+        <!-- Company Selection and Prediction -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <select id="companySelect" class="form-select">
+                    <option value="">Select a company...</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <button id="predictBtn" class="btn btn-danger w-100">Predict</button>
+            </div>
+        </div>
+
+        <!-- Metrics -->
+        <div class="card bg-dark mb-4">
+            <div class="card-header">
+                <h5>Performance Metrics</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <p>MSE: <span id="mse">-</span></p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>RMSE: <span id="rmse">-</span></p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>MAE: <span id="mae">-</span></p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>R²: <span id="r2">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stock Chart -->
+        <div class="card bg-dark mb-4">
+            <div class="card-header">
+                <h5>Stock Price Predictions</h5>
+            </div>
+            <div class="card-body">
+                <div id="stockChart" class="chart-container"></div>
+            </div>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="card bg-dark mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5>News Sentiment Analysis</h5>
+                <button id="loadMoreNews" class="btn btn-outline-light btn-sm" style="display: none;">Load More News</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Headline</th>
+                                <th>Sentiment</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sentimentTable">
+                            <tr>
+                                <td colspan="4" class="text-center">Select a company to view sentiment analysis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
